@@ -1,23 +1,53 @@
-import React from "react"
-import { Navbar, NavbarBrand } from "reactstrap"
+import React, { useState } from 'react';
+import { Container } from 'reactstrap';
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+  NavbarText,
+} from 'reactstrap';
 
-const Header = () => {
-    return (
-      <>
-        <Navbar
-    className="my-2"
-    color="info"  
-  >
-    <a href="/">
-      <img src="https://p1.hiclipart.com/preview/463/970/421/dr-doom-png-clipart.jpg"
-        alt="Cat fonts" 
-        height="20" 
-      />
-    </a>
-  </Navbar>
-      </>
-    )
-  }
-  
-  export default Header;
-  
+function Header(args) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => setIsOpen(!isOpen);
+
+  return (
+    <Container>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Logo</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Villains</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Villainesses</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Disabled</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    </Container>
+  );
+}
+
+export default Header;
