@@ -10,7 +10,7 @@ const Header = () => {
   >
     <a href="/">
       <img src="https://p1.hiclipart.com/preview/463/970/421/dr-doom-png-clipart.jpg"
-        alt="Cat fonts" 
+        alt="Dr. Doom, a Marvel villain, slouches sultrily" 
         height="20" 
       />
     </a>
