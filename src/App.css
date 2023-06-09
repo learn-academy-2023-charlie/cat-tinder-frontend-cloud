@@ -33,6 +33,15 @@ body {
 .villain-show-cards {
 
 }
+.profile-pic {
+  width: 30%;
+  height: 30%;
+  justify-content: space-around;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
 .villain-show-img {
   
 }
