@@ -9,11 +9,13 @@ const VillainIndex = ({ villains }) => {
     <main className="villain-index-cards">
       {villains?.map((villain, index) => {
         return (
+          <div>
+            <br />
+            <br />
           <Card 
             style={{width:"14rem"}}
             key={index}
             >
-            <br />
             <img 
               alt={`profile of the villain ${villain.name}`} 
               src={villain.image} 
@@ -32,6 +34,7 @@ const VillainIndex = ({ villains }) => {
               </Button>
             </CardBody>
           </Card>
+          </div>
         )
       })}
     </main>

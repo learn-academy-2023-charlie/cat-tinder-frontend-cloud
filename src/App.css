@@ -45,6 +45,11 @@ body {
 .villain-show-img {
   
 }
+.card-columns {
+{
+    column-count: 2;
+  }
+}
 
 .new-villain-form {
   color:aliceblue;

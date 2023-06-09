@@ -1,7 +1,7 @@
 import React from "react"
 import { useParams } from "react-router-dom"
 import { NavLink } from "react-router-dom"
-import { Card, CardGroup, CardBody, CardTitle, CardSubtitle, Button } from "reactstrap"
+import { Card, CardGroup, CardBody, CardTitle, CardSubtitle, Col, CardImg } from "reactstrap"
 
 const VillainShow = ({ villains }) => {
   const { id } = useParams()
@@ -12,17 +12,19 @@ const VillainShow = ({ villains }) => {
       <br />
       <br />
       {currentVillain && (
+        <>
+        <div>
         <Card 
-        style={{width:"60%"}}
+        style={{width:"20%"}}
         >
-          <img 
+          <CardImg
             alt={`profile of the villain ${currentVillain.name}`} 
             src={currentVillain.image} 
-            className="profile-pic"
+            className="profile-pic text-success"
           />
+        </Card>
 
-          <CardBody>
-          <CardGroup>
+          <CardBody className="card text-center">
             <CardTitle tag="h5">{currentVillain.name}
             </CardTitle>
 
@@ -30,23 +32,28 @@ const VillainShow = ({ villains }) => {
               Age: {currentVillain.age}
             </CardSubtitle>
 
-            <CardSubtitle className="mb-2 text-muted" tag="h6">
+            <CardSubtitle className="mb-2 text-success" tag="h6">
               Power: {currentVillain.power}
             </CardSubtitle>
 
-            <CardSubtitle className="mb-2 text-muted" tag="h6">
+            <CardSubtitle className="mb-2 text-danger" tag="h6">
               Evil scheme: {currentVillain.evil_scheme}
             </CardSubtitle>
+          </CardBody>
+        </Card>
+        
+        <Card style={{width:"60%"}}>
+          <CardBody>
+            <p> My hobbies are: {currentVillain.hobbies} </p>
 
+            <br />
 
-          </CardGroup> 
-          <CardGroup>
-          </CardGroup>
+            <p> {currentVillain.about} </p>
 
           </CardBody>
-
         </Card>
-
+        </div>
+        </>
       )}
     </main>
   )
