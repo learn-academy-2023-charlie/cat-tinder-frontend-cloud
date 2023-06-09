@@ -1,5 +1,6 @@
 const mockVillains = [
     {
+      id: 1,
       name: 'Doctor Doom',
       age: 53,
       hobbies: 'Practicing magic. Trying to free his mothers soul from Mephistos realm. Playing with kittens',
@@ -9,6 +10,7 @@ const mockVillains = [
       image: 'https://www.alexrossart.com/cdn/shop/products/Doomcolor_1024x1024.jpg?v=1678370703'
     },
     {
+      id: 2,
       name: 'Venom',
       age: 20,
       hobbies: 'Bullying Peter Parker and Spider-man',
@@ -18,6 +20,7 @@ const mockVillains = [
       image: 'https://www.alexrossart.com/cdn/shop/products/VENOM_03674f1a-8087-439b-8179-e6ce783f5df2_1024x1024.jpg?v=1676642964'
     },
     {
+      id: 3,
       name: 'Mystique',
       age: 92,
       hobbies: 'Committing robberies. Impersonating other people.',

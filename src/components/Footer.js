@@ -2,20 +2,16 @@ import React from "react"
 import { Navbar, NavbarBrand } from "reactstrap"
 
 const Footer = () => {
-    return (
-      <>
-       <Navbar
-    className="my-2"
-    color="dark"
-    fixed="bottom"
-  >
-    <NavbarBrand href="/">
-      &copy; V & C | 2023
-    </NavbarBrand>
-  </Navbar>
-      </>
-    )
-  }
+  return (
+    <div style={{
+    display: 'block'
+    }}>      
+      <Navbar className="Footer mt5" fixed="bottom">
+        <NavbarBrand href="/" style={{color:"white"}}> &copy; V & C | 2023 </NavbarBrand>
+      </Navbar>
+    </div>
+  )
+}
   
-  export default Footer;
+export default Footer;
   

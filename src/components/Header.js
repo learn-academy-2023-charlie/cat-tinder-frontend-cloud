@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
-import { Container } from 'reactstrap';
 import {
-  Collapse,
   Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
   NavItem,
+  NavbarToggler,
+  Collapse,
   NavLink,
+  Nav,
+  NavbarBrand,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
@@ -16,38 +15,32 @@ import {
 } from 'reactstrap';
 
 function Header(args) {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggle = () => setIsOpen(!isOpen);
+  const [isOpen, setIsOpen] = React.useState(false);
 
   return (
-    <Container>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Logo</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Villains</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Villainesses</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-    </Container>
-  );
+<div style={{
+            display: 'block', width: "100vw"
+        }}>
+            <Navbar color="dark" expand="md" fixed="top" className="mb-5">
+                <NavbarBrand href="/" style={{color:"white"}}>VillainTender</NavbarBrand>
+                <NavbarToggler onClick={() => { setIsOpen(!isOpen) }} />
+                <Collapse isOpen={isOpen} navbar>
+                    <Nav className="mr-auto" navbar>
+                        <NavItem>
+                            <NavLink href="/" style={{color:"white"}}>Home</NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink href="/villainindex" style={{color:"white"}}>See All</NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink href="/villainnew" style={{color:"white"}}>New Villain</NavLink>
+                        </NavItem>
+                    </Nav>
+                </Collapse>
+            </Navbar>
+        </div >
+    );
 }
-
+  
 export default Header;
+  

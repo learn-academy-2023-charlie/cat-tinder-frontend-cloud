@@ -13,16 +13,18 @@ describe("<Header />", () => {
         div
         )
     })
-    it("renders a logo with a src and alt", () => {
-        const div = document.createElement("div")
+    it("has clickable links", () => {
         render(
             <BrowserRouter>
                 <Header />
             </BrowserRouter>,
-        div
+        
         )
-        const logo = screen.getByRole("img")
-        expect(logo).toHaveAttribute("src", "https://p1.hiclipart.com/preview/463/970/421/dr-doom-png-clipart.jpg")
-        expect(logo).toHaveAttribute("alt", "Dr. Doom, a Marvel villain, slouches sultrily")  
+        userEvent.click(screen.getByText("See All"))
+        expect(screen.getByText("See All")).toBeInTheDocument()
+        userEvent.click(screen.getByText("New Villain"))
+        expect(screen.getByText("New Villain")).toBeInTheDocument()
+        userEvent.click(screen.getByText("Home"))
+        expect(screen.getByText("Home")).toBeInTheDocument()
     })
 })
