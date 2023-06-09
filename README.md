@@ -67,6 +67,31 @@ const VillainShow = ({ villains }) => {
 export default VillainShow;
 
 
+INDEX TESTING
+// import { render } from "@testing-library/react"
+// import VillainIndex from "../pages/VillainIndex"
+
+// describe("<VillainIndex />", () => {
+//     it("renders without crashing", () => {})
+//     it("renders villain cards", () => {
+//         const div = ddocument.createElement("div")
+//         render(<VillainIndex villains={mockVillains} />, div)
+//         mockVillains.forEach(villain => {
+//             const villainName = screen.getByText(villain.name)
+//             expect(villainName).toBeInTheDocument()
+//         })
+//     })
+// })
+
+
+SHOW TESTING
+// import { render } from "@testing-library/react"
+// import VillainShow from "../pages/VillainShow"
+
+// describe("<VillainShow />", () => {
+//   it("renders without crashing", () => {})
+// })
+
 
 # Getting Started with Create React App
 

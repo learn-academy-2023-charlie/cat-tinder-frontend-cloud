@@ -23,10 +23,8 @@ const VillainNew = ({ createVillain }) => {
   return (
 
     <Form className="new-villain-form">
-      <br>
-      </br>
-      <br>
-      </br>
+      <br />
+      <br />
       <div class="form-group ms-5 mt-5">
         <div class="form-group row">
           <div class="form-group col col-md-4">
