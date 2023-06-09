@@ -1,3 +1,73 @@
+Getting carried away:
+
+VillainIndex
+import React from "react"
+import { Card, CardBody, CardTitle, CardSubtitle, Button } from "reactstrap"
+import { NavLink } from "react-router-dom"
+
+const VillainIndex = ({ villains }) => {
+  console.log(villains);
+  return (
+    <main className="villain-index-cards">
+      {villains?.map((villain, index) => {
+        return (
+          <Card 
+            style={{width:"14rem"}}
+            key={index}
+          >
+            <img 
+              alt={`profile of the villain ${villain.name}`} 
+              src={villain.image} 
+            />
+
+            <CardBody>
+              <CardTitle tag="h5">{villain.name}
+              </CardTitle>
+                <CardSubtitle className="mb-2 text-muted" tag="h6">
+                  Age: {villain.age}
+                </CardSubtitle>
+              <Button>
+                <NavLink to={`/villainshow/${villain.id}`} className="nav-link">
+                    Fall for the dark side
+                  </NavLink>
+              </Button>
+            </CardBody>
+          </Card>
+        )
+      })}
+    </main>
+  )
+}
+  
+export default VillainIndex;
+
+VillainShow
+import React from "react"
+import { useParams } from "react-router-dom"
+
+const VillainShow = ({ villains }) => {
+  const { id } = useParams()
+  let currentVillain = villains?.find(villain => villain.id === +id)
+
+  return (   
+    <main className="villain-show-cards">
+      {currentVillain && (
+        <>
+          <img 
+          alt={`profile of the villain ${currentVillain.name}`}
+          src={currentVillain.image}
+          classname="villain-show-img"
+          />
+        </>
+      )}
+    </main>
+  )
+}
+  
+export default VillainShow;
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

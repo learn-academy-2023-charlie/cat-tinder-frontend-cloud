@@ -3,7 +3,6 @@ import { Form, FormGroup, Label, Input, Button } from "reactstrap";
 import { useNavigate } from "react-router-dom";
 
 const VillainNew = ({ createVillain }) => {
-  
   const [newVillain, setNewVillain] = useState({
     name: "",
     age: "",
@@ -15,87 +14,103 @@ const VillainNew = ({ createVillain }) => {
   })
 
   const navigate = useNavigate()
-
+  
   const handleChange = (e) => {
-    setNewVillain({ ...newVillain, [e.target.name]: e.target.value });
+    setNewVillain({ ...newVillain, [e.target.name]: e.target.value })
   }
   const handleClick = () => {
     createVillain(newVillain)
     navigate("/villainindex")
   }
+
+  //working on: styling form, add padding so it doesn't get stuck behind toolbar. CSS and bootstrap aren't playing nice though
   return (
-    <Form>
+    <Form className="new-villain-form">
+      <div class="form-group">
+        <FormGroup>
+          <Label for="villain-name" class="form-label">Name</Label>
+          <Input
+            id="villain-name"
+            type="text"
+            name="name"
+            placeholder="evil title here..."
+            onChange={handleChange}
+            value={newVillain.name}
+          />
+          </FormGroup>
+        </div>
+        <div class="form-group col-md-1">
+          <FormGroup>
+            <Label for="villain-age" class="form-label">Age</Label>
+            <Input
+            id="villain-age"
+            type="number"
+            name="age"
+            placeholder="age goes here"
+            onChange={handleChange}
+            value={newVillain.age}
+            />
+          </FormGroup>
+        <div class="form-group col-md-4">
+          <FormGroup>
+            <Label for="villain-power" class="form-label">Power</Label>
+            <Input
+              type="text"
+              name="power"
+              placeholder="superstrength, telekinesis, sorcery..."
+              id="villain-power"
+              onChange={handleChange}
+              value={newVillain.power}
+            />
+          </FormGroup>
+          </div>
+      </div>
       <FormGroup>
-        <Label for="name">Name</Label>
+        <Label for="villain-hobbies" class="form-label">Hobbies</Label>
         <Input
+          id="villain-hobbies"
           type="text"
-          name="name"
-          id="name"
-          onChange={handleChange}
-          value={newVillain.name}
-        />
-      </FormGroup>
-      <FormGroup>
-        <Label for="age">Age</Label>
-        <Input
-          type="number"
-          name="age"
-          id="age"
-          onChange={handleChange}
-          value={newVillain.age}
-        />
-      </FormGroup>
-      <FormGroup>
-        <Label for="hobbies">Hobbies</Label>
-        <Input
-          type="text"
+          placeholder="enjoys world domination, walks on the beach at sunset..."
           name="hobbies"
-          id="hobbies"
           onChange={handleChange}
           value={newVillain.hobbies}
         />
       </FormGroup>
       <FormGroup>
-        <Label for="power">Power</Label>
+        <Label for="villain-about" class="form-label">About</Label>
         <Input
-          type="text"
-          name="power"
-          id="power"
-          onChange={handleChange}
-          value={newVillain.power}
-        />
-      </FormGroup>
-      <FormGroup>
-        <Label for="about">About</Label>
-        <Input
-          type="text"
+          type="textarea"
           name="about"
-          id="about"
+          placeholder="Tell us about you"
+          id="villain-about"
           onChange={handleChange}
           value={newVillain.about}
         />
       </FormGroup>
       <FormGroup>
-        <Label for="evil_scheme">Evil Scheme</Label>
+        <Label for="villain-evil_scheme" class="form-label">Evil Scheme</Label>
         <Input
           type="text"
           name="evil_scheme"
-          id="evil_scheme"
+          placeholder="...share if you dare"
+          id="villain-evil_scheme"
           onChange={handleChange}
           value={newVillain.evil_scheme}
         />
       </FormGroup>
       <FormGroup>
-        <Label for="image">Image</Label>
+        <Label for="villain-image" class="form-label">Image</Label>
         <Input
           type="text"
           name="image"
-          id="image"
+          placeholder="URL to your image here"
+
+          id="villain-image"
           onChange={handleChange}
           value={newVillain.image}
         />
       </FormGroup>
-      <Button onClick={handleClick} type="submit">Submit</Button>
+      <Button onClick={handleClick} type="submit" class="button">Join the forces of darkness</Button>
     </Form>
   );
 };

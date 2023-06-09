@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import {
-  Collapse,
   Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
   NavItem,
+  NavbarToggler,
+  Collapse,
   NavLink,
+  Nav,
+  NavbarBrand,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
@@ -15,23 +15,44 @@ import {
 } from 'reactstrap';
 
 function Header(args) {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = React.useState(false);
+  // const toggle = () => setIsOpen(!isOpen);
 
-  const toggle = () => setIsOpen(!isOpen);
 
+//header currently inline. To make it drop down from top right corner, change expand="md" to expand="l" on line 27. not sure how to get an obvious clickable thing there though.
   return (
-    <div>
-      <Navbar dark="true" {...args}>
-        <NavbarBrand href="/">reactstrap</NavbarBrand>
-        
-      </Navbar>
-    </div>
-  );
+<div style={{
+            display: 'block', width: "100vw"
+        }}>
+            <Navbar color="dark" expand="md" fixed="top">
+                <NavbarBrand href="/" style={{color:"white"}}>VillainTender</NavbarBrand>
+                <NavbarToggler onClick={() => { setIsOpen(!isOpen) }} />
+                <Collapse isOpen={isOpen} navbar>
+                    <Nav className="mr-auto" navbar>
+                        <NavItem>
+                            <NavLink href="/" style={{color:"white"}}>Home</NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink href="/villainindex" style={{color:"white"}}>See All</NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink href="/villainnew" style={{color:"white"}}>New Villain</NavLink>
+                        </NavItem>
+                    </Nav>
+                </Collapse>
+            </Navbar>
+        </div >
+    );
 }
-
+  
 export default Header;
-
-
+  
+  
+  // <div>
+  //   <Navbar dark="true" {...args} fixed="top">
+  //     <NavbarBrand href="/">Villain Tinder</NavbarBrand>
+  //   </Navbar>
+  // </div>
 
 
 // import React, { useState } from 'react';
