@@ -9,7 +9,6 @@ describe("<VillainIndex />", () => {
     <BrowserRouter>
       <VillainIndex villains={mockVillains} />
     </BrowserRouter>,
-    // div
   );
   it("renders villain cards", () => {
     const div = document.createElement("div");
@@ -23,7 +22,6 @@ describe("<VillainIndex />", () => {
         screen.getByAltText(`profile of the villain ${villain.name}`
         )
     })
-    screen.logTestingPlaygroundURL();
   });
 });
 
