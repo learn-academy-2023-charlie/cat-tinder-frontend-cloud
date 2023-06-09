@@ -6,7 +6,7 @@ const Footer = () => {
     <div style={{
     display: 'block'
     }}>      
-      <Navbar className="Footer ml5" fixed="bottom">
+      <Navbar className="Footer mt5" fixed="bottom">
         <NavbarBrand href="/" style={{color:"white"}}> &copy; V & C | 2023 </NavbarBrand>
       </Navbar>
     </div>
