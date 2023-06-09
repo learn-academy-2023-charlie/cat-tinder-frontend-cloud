@@ -39,5 +39,9 @@
 
 body {
   background-image: url("https://rare-gallery.com/resol/1920x1080/341416-Thanos-Infinity-Gauntlet-Minimalist-Minimalism-Marvel-Comics-Supervillain-Comics-Comic-Supervillains-Villain-Villains.jpg");
+  /* background-image: url("https://wallpapercave.com/wp/wp6771727.jpg"); */
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
-
