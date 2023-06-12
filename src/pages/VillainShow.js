@@ -21,11 +21,11 @@ const VillainShow = ({ villains }) => {
       {currentVillain && (
         <>
           <div className="about">
-            <Card style={{ width: "20%" }}>
+            <Card style={{ width: "30%" }}>
               <img
                 alt={`profile of the villain ${currentVillain.name}`}
                 src={currentVillain.image}
-                className="profile-pic text-success"
+                className="profile-pic"
               />
               {/* </Card> */}
 
