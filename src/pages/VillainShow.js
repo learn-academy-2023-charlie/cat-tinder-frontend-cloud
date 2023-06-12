@@ -27,7 +27,6 @@ const VillainShow = ({ villains }) => {
                 src={currentVillain.image}
                 className="profile-pic"
               />
-              {/* </Card> */}
 
               <CardBody className="card text-center">
                 <CardTitle tag="h5">{currentVillain.name}</CardTitle>
