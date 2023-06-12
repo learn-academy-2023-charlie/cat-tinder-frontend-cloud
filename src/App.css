@@ -1,5 +1,6 @@
 body {
   background-image: url("https://wallpapercave.com/wp/wp6771727.jpg");
+  /* background-image: url("https://wallpapersafari.com/downloadres/TFJsA2/desktop/1920/1080/"); */
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -63,4 +64,25 @@ body {
 .about {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-columns {
+  /* display: inline-block;
+  @include media-breakpoint-only(sm) {
+    column-count: 4;
+  } */
+  display: flex;
+  flex-wrap: wrap;
+  width: 1300px;
+}
+
+.eachCard {
+  margin-right: 100px;
+}
+
+.homeImage {
+  margin-right: 100px;
+  float: right;
 }

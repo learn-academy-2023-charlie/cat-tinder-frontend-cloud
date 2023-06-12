@@ -6,7 +6,7 @@ const VillainIndex = ({ villains }) => {
   console.log(villains);
   return (
     
-    <main className="villain-index-cards">
+    <main className="card-columns ms-4">
       {villains?.map((villain, index) => {
         return (
           <div>
@@ -15,6 +15,7 @@ const VillainIndex = ({ villains }) => {
           <Card 
             style={{width:"14rem"}}
             key={index}
+            className="eachCard"
             >
             <img 
               alt={`profile of the villain ${villain.name}`} 

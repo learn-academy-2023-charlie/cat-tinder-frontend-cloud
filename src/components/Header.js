@@ -21,16 +21,16 @@ function Header(args) {
 <div style={{
             display: 'block', width: "100vw"
         }}>
-            <Navbar color="dark" expand="md" fixed="top" className="mb-5">
-                <NavbarBrand href="/" style={{color:"white"}}>VillainTender</NavbarBrand>
+            <Navbar color="transparent" expand="md" fixed="top" className="mb-5">
+                <NavbarBrand href="/" style={{color:"white"}}>VillainTinder &nbsp; &nbsp; &nbsp; &nbsp;</NavbarBrand>
                 <NavbarToggler onClick={() => { setIsOpen(!isOpen) }} />
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="mr-auto" navbar>
                         <NavItem>
-                            <NavLink href="/" style={{color:"white"}}>Home</NavLink>
+                            <NavLink href="/" style={{color:"white"}}>Home &nbsp; &nbsp; &nbsp; &nbsp;</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="/villainindex" style={{color:"white"}}>See All</NavLink>
+                            <NavLink href="/villainindex" style={{color:"white"}}>See All &nbsp; &nbsp; &nbsp; &nbsp;</NavLink>
                         </NavItem>
                         <NavItem>
                             <NavLink href="/villainnew" style={{color:"white"}}>New Villain</NavLink>
