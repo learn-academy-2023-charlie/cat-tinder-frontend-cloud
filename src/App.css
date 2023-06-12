@@ -1,6 +1,5 @@
 body {
-  background-image: url("https://rare-gallery.com/resol/1920x1080/341416-Thanos-Infinity-Gauntlet-Minimalist-Minimalism-Marvel-Comics-Supervillain-Comics-Comic-Supervillains-Villain-Villains.jpg");
-  /* background-image: url("https://wallpapercave.com/wp/wp6771727.jpg"); */
+  background-image: url("https://wallpapercave.com/wp/wp6771727.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -10,7 +9,7 @@ body {
 
 .App {
   text-align: center;
-  color: white
+  color: white;
 }
 
 .header {
@@ -21,7 +20,7 @@ body {
   padding: 0;
 }
 
-.card{
+.card {
   margin: 2rem 0;
 }
 .villain-index-cards {
@@ -31,26 +30,39 @@ body {
 }
 
 .villain-show-cards {
-
 }
+.profile-pic {
+  width: 30%;
+  height: 30%;
+  justify-content: space-around;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .villain-show-img {
-  
 }
 
 .new-villain-form {
-  color:aliceblue;
+  color: aliceblue;
   width: "80vw";
 }
 
 .form-label {
-
 }
 
 .button {
-
 }
 
 .Footer {
-  color: white
+  color: white;
+}
 
+.bio {
+  float: right;
+  flex-direction: row;
+}
+
+.about {
+  display: flex;
 }
