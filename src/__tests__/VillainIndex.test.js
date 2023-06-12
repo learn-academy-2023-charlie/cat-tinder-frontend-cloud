@@ -4,12 +4,15 @@ import mockVillains from "../mockVillains";
 import { BrowserRouter } from "react-router-dom";
 
 describe("<VillainIndex />", () => {
-  it("renders without crashing", () => {});
-  render(
-    <BrowserRouter>
-      <VillainIndex villains={mockVillains} />
-    </BrowserRouter>,
-  );
+  it("renders without crashing", () => {
+    const div = document.createElement("div");
+    render(
+      <BrowserRouter>
+        <VillainIndex villains={mockVillains} />
+      </BrowserRouter>,
+      div
+    );
+  });
   it("renders villain cards", () => {
     const div = document.createElement("div");
     render(
@@ -18,11 +21,8 @@ describe("<VillainIndex />", () => {
       </BrowserRouter>,
       div
     );
-    mockVillains.forEach(villain => {
-        screen.getByAltText(`profile of the villain ${villain.name}`
-        )
-    })
+    mockVillains.forEach((villain) => {
+      expect(screen.getByAltText(`profile of the villain ${villain.name}`)).toBeInTheDocument()
+    });
   });
 });
-
-

@@ -163,3 +163,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+background option 2
+
+background-image: url("https://rare-gallery.com/resol/1920x1080/341416-Thanos-Infinity-Gauntlet-Minimalist-Minimalism-Marvel-Comics-Supervillain-Comics-Comic-Supervillains-Villain-Villains.jpg");
