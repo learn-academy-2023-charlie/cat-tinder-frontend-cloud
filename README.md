@@ -4,7 +4,7 @@
 
 Vance Apostol and Sarah Cherry created 'Villain Tinder' as team Cloud during LEARN Academy's 4 month full stack software development bootcamp. The stack used for this is Ruby on Rails, RSpec testing, and React with JSX, using ActiveRecord for database management. This was our first independent full stack app, and will have full CRUD functionality. 
 
-This repo contains the frontend - UI and JS unit testing. Find the backend repo [here](https://github.com/learn-academy-2023-charlie/cat-tinder-backend-cloud/tree/main)
+This repo contains the frontend - UI and JS unit testing. Find the backend repo [here](https://github.com/learn-academy-2023-charlie/cat-tinder-backend-cloud/blob/main/README.md)
 
 ## Motivation
 Villain Tinder was largely created as a process of learning.
